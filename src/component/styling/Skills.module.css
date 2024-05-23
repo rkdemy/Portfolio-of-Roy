@@ -1,0 +1,47 @@
+.parallax {
+  margin: 0 auto;
+  white-space: nowrap;
+  /* width: 80%; */
+  display: flex;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid var(--border-colour);
+  border-top: 1px solid var(--border-colour);
+  cursor: default;
+  padding: 1rem 0;
+}
+
+.parallax:nth-child(2) {
+  border: none;
+}
+
+.parallax_container {
+  overflow: hidden;
+  margin: 0 auto;
+  font-family: "OutfitMedium";
+  font-size: 30px;
+}
+
+.parallax .scroller {
+  font-weight: 400;
+  text-transform: uppercase;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5rem;
+}
+
+.parallax span {
+  display: flex;
+  color: var(--border-colour);
+  align-items: center;
+}
+
+.parallax img {
+  margin-right: 5rem;
+  /* width: 24px; */
+}
+
+.icons p {
+  display: flex;
+}

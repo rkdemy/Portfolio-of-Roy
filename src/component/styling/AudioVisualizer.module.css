@@ -1,0 +1,34 @@
+.audio_visualizer {
+  position: relative;
+  width: 10px; /* Adjust the width and height as needed */
+  height: 200px;
+  background-color: #333; /* Background color of the container */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.audio_visualizer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #ff0000,
+    #00ff00
+  ); /* Gradient colors for the visualizer bars */
+  animation: visualizer 2s infinite linear; /* Adjust animation duration and timing function as needed */
+}
+
+@keyframes visualizer {
+  0% {
+    transform: scaleY(0.5);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.5);
+  }
+}

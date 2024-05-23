@@ -1,0 +1,183 @@
+.contact {
+  font-family: "Outfit";
+  color: var(--hero-name);
+  width: 100%;
+}
+
+.contact a {
+  color: var(--border-colour);
+  transition: all 0.3s linear;
+  text-decoration: none;
+}
+
+.contact h4 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.email {
+  font-family: "OutfitMedium";
+  text-transform: lowercase !important;
+}
+
+.marquee {
+  display: flex;
+  z-index: 0;
+  margin: 0 auto 2rem auto;
+  font-size: 100px;
+  font-family: "Outfit";
+  border-top: 1px solid var(--border-colour);
+  border-bottom: 1px solid var(--border-colour);
+  width: 80%;
+  padding: 2rem 0;
+  cursor: pointer;
+}
+
+.marquee a:hover {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--border-colour);
+}
+
+.contact ul {
+  display: flex;
+  justify-content: center;
+}
+
+.contact li {
+  list-style: none;
+}
+
+/* Button Animation */
+/* Button Animation and CSS */
+button {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--page-bg);
+  font-family: "Zilla";
+  font-weight: 400;
+  margin: 1.5rem 0.5rem;
+  border-radius: 2rem;
+  width: 95px;
+  height: 30px;
+  border: none;
+  background-color: var(--hero-name);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+button .span_mother {
+  display: flex;
+  overflow: hidden;
+}
+
+button:hover .span_mother {
+  position: absolute;
+}
+
+button:hover .span_mother span {
+  transform: translateY(1.2em);
+}
+
+button .span_mother span:nth-child(1) {
+  transition: 0.2s;
+}
+
+button .span_mother span:nth-child(2) {
+  transition: 0.3s;
+}
+
+button .span_mother span:nth-child(3) {
+  transition: 0.4s;
+}
+
+button .span_mother span:nth-child(4) {
+  transition: 0.5s;
+}
+
+button .span_mother span:nth-child(5) {
+  transition: 0.6s;
+}
+
+button .span_mother span:nth-child(6) {
+  transition: 0.7s;
+}
+button .span_mother span:nth-child(7) {
+  transition: 0.8s;
+}
+button .span_mother span:nth-child(8) {
+  transition: 0.9s;
+}
+
+button .span_mother2 {
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+}
+
+button .span_mother2 span {
+  transform: translateY(-1.2em);
+}
+
+button:hover .span_mother2 span {
+  transform: translateY(0);
+}
+
+button .span_mother2 span {
+  transition: 0.2s;
+}
+
+button .span_mother2 span:nth-child(2) {
+  transition: 0.3s;
+}
+
+button .span_mother2 span:nth-child(3) {
+  transition: 0.4s;
+}
+
+button .span_mother2 span:nth-child(4) {
+  transition: 0.5s;
+}
+
+button .span_mother2 span:nth-child(5) {
+  transition: 0.6s;
+}
+
+button .span_mother2 span:nth-child(6) {
+  transition: 0.7s;
+}
+button .span_mother2 span:nth-child(7) {
+  transition: 0.8s;
+}
+button .span_mother2 span:nth-child(8) {
+  transition: 0.9s;
+}
+/* End of Button */
+/* Button Animation */
+
+@media (max-width: 1080px) {
+  .marquee {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 570px) {
+  .marquee {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .marquee {
+    height: 100px;
+    line-height: 64px;
+    padding: 1rem 0;
+  }
+}

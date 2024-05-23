@@ -1,0 +1,81 @@
+.switch_container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 5.5vw;
+  height: 5.5vw;
+  border-radius: 500px;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--hero-name);
+  z-index: 2;
+
+  animation-name: expand;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.collapse {
+  animation-name: blink;
+  animation-duration: 0.7s;
+}
+
+.circle {
+  position: relative;
+  width: 5.5vw;
+  height: 5.5vw;
+  border-radius: 50%;
+  transition: 0.3s linear;
+  border: 2px solid var(--page-bg);
+  background-color: var(--page-bg);
+}
+
+@keyframes blink {
+  0% {
+    height: 5.5vw;
+  }
+
+  50% {
+    height: 10px;
+  }
+  100% {
+    height: 5.5vw;
+  }
+}
+
+@keyframes expand {
+  0% {
+    width: 5.5vw;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1638px) {
+  .switch_container {
+    width: 5.4vw;
+    height: 5.4vw;
+  }
+
+  .circle {
+    width: 5.4vw;
+    height: 5.4vw;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .switch_container {
+    width: 6.5vw;
+    height: 6.5vw;
+  }
+
+  .circle {
+    width: 6.5vw;
+    height: 6.5vw;
+  }
+}

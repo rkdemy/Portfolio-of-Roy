@@ -1,0 +1,85 @@
+.modal_content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.modal_content {
+  position: relative;
+  top: 40%;
+  cursor: default;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--hero-name);
+  padding: 14px 28px;
+  border-radius: 20px;
+  max-width: 600px;
+
+  background-image: linear-gradient(transparent, #e3e3e3),
+    linear-gradient(to right, rgb(192, 116, 178, 0.3), #6b6b6b);
+
+  border: 2px solid white;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal_content input,
+.modal_content textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid var(--border-colour);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.submit {
+  cursor: pointer;
+  background-color: var(--page-bg);
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--hero-name);
+  font-weight: 600;
+  border-radius: 2rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit:hover {
+  background-color: var(--border-colour);
+  color: var(--hero-name);
+}
+
+.modal_content textarea {
+  height: 150px;
+}
+
+.close_modal {
+  font-family: "Outfit";
+  width: 100%;
+  font-size: 24px;
+  margin: 0 0 1rem 0;
+  background-color: none;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+
+.close {
+  cursor: pointer;
+}

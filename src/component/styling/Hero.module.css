@@ -1,0 +1,134 @@
+.hero_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 80;
+  height: 100vh;
+}
+
+.hero_container__content {
+  overflow: hidden;
+}
+
+.hero_name {
+  display: block;
+  margin-top: 0rem;
+  justify-content: center;
+  color: var(--hero-name);
+}
+
+.hero_name h1 {
+  font-family: "OTFGlusp";
+  z-index: 80;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 8vw;
+  line-height: 0.9;
+  margin: 0;
+  display: flex;
+  white-space: nowrap;
+  margin-bottom: 1rem;
+}
+
+.hero_2 {
+  justify-content: center;
+}
+
+.hero_2,
+.hero_3,
+.hero_4 {
+  margin: 0;
+  display: flex;
+}
+
+.hero_links {
+  display: flex;
+}
+
+.hero_name img {
+  border-radius: 90px;
+  overflow: hidden;
+  object-fit: cover;
+  width: calc(100% - 8px);
+  height: calc(5.9vw - 8px);
+  border: 4px solid white;
+}
+
+/* Styles for the container of the overlapping image */
+.image_container {
+  position: relative;
+  width: 100%;
+  align-items: start;
+  object-fit: cover;
+  overflow: visible;
+}
+
+.hero_links li {
+  list-style: none;
+  margin: 0 2rem;
+  z-index: 80;
+  display: flex;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.hero_links a {
+  font-family: "Zilla", "IBM Plex Mono", "Inter";
+  text-decoration: none;
+  color: var(--hero-name);
+  position: relative;
+  display: flex;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--hero-name);
+  transform-origin: bottom right;
+  border-radius: 10px;
+  transition: transform 0.25s ease-out;
+  transform: scaleX(0);
+}
+
+.underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  margin-right: 0.3rem;
+}
+
+@media screen and (max-width: 1638px) {
+  .hero_name h1 {
+    font-size: 7.9vw;
+  }
+
+  .hero_name img {
+    height: calc(6vw - 6px);
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .hero_name h1 {
+    font-size: 9vw;
+  }
+
+  .hero_name img {
+    height: calc(6vw);
+  }
+}
+
+@media screen and (max-width: 593px) {
+  .hero_links li {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,66 @@
+.summary_container {
+  padding: 15rem 0;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.summary_container h3 {
+  color: var(--hero-name);
+  font-size: 5vw;
+  font-weight: 400;
+  font-family: "Outfit";
+  margin-bottom: 1rem;
+}
+
+.summary_container p {
+  font-size: 24px;
+  font-family: "OutfitMedium";
+  color: var(--hero-name);
+}
+
+.summary_container__contents {
+  display: flex;
+  width: 100%;
+  gap: 5rem;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1423px) {
+  .summary_container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .summary_container__contents {
+    flex-wrap: wrap;
+    gap: 0;
+    max-width: 690px;
+  }
+
+  .summary_container h3 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .summary_container {
+    padding: 10rem 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .summary_container {
+    padding: 8rem 0;
+  }
+
+  .summary_container p {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .summary_container {
+    width: 90%;
+  }
+}

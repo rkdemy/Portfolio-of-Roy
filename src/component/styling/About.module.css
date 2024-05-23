@@ -1,0 +1,77 @@
+.about {
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  padding: 15rem 0;
+  position: relative;
+
+  border-top: 1px solid var(--border-colour);
+  border-bottom: 1px solid var(--border-colour);
+}
+
+.about h4 {
+  color: var(--hero-name);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  font-family: "Outfit";
+  text-transform: uppercase;
+}
+
+.about_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: -1;
+  align-items: center;
+}
+
+.about h3 {
+  font-size: 3.4vw;
+  text-align: center;
+  font-weight: 400;
+  font-family: "Outfit";
+  color: var(--border-colour);
+}
+
+.about img {
+  width: calc(5vw * 1);
+  border-radius: 100px;
+}
+
+.image_container {
+  margin: 0 5px;
+}
+
+.blocks_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .about {
+    padding: 10rem 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .about {
+    padding: 8rem 0;
+  }
+
+  .about h3 {
+    font-size: 30px;
+  }
+
+  .about img {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .about {
+    width: 90%;
+  }
+}

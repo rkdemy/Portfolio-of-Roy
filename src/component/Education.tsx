@@ -26,15 +26,22 @@ const Education = () => {
               comes to handovers, maintenance and collaboration.
             </p>
             <br />
-            <div className={styles.wsu}>
-              <LazyLoad once>
-                <img src={wsu} alt="WSU Logo" />
-              </LazyLoad>
-              <span>
-                <p>Bachelors of Information and Communications Technology</p>
-                <p>Western Sydney University</p>
-              </span>
-            </div>
+
+            <a
+              href="https://www.myequals.net/r/sharelink/189a0b87-ace2-4169-a01d-d87e9b23d94b/20e420ea-2f11-4f16-9b49-ad55c4a46159"
+              target="_blank"
+              style={{ textDecoration: "none" }}
+            >
+              <div className={styles.wsu}>
+                <LazyLoad once>
+                  <img src={wsu} alt="WSU Logo" />
+                </LazyLoad>
+                <span>
+                  <p>Bachelors of Information and Communications Technology</p>
+                  <p>Western Sydney University</p>
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </div>

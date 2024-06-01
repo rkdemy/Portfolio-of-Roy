@@ -3,7 +3,6 @@ import { useInView } from "react-intersection-observer";
 import cat from "../assets/about/cat.png";
 import flower from "../assets/about/flower.png";
 import people from "../assets/about/people.png";
-import { useEffect, useState } from "react";
 
 const options = [
   "React",
@@ -21,20 +20,7 @@ const options = [
 ];
 
 const About = () => {
-  const [containerWidth, setContainerWidth] = useState(0);
   const [ref, inView] = useInView({ triggerOnce: true, rootMargin: "0px" });
-
-  useEffect(() => {
-    const handleResize = () => {
-      //@ts-ignore
-      const width = document.querySelector(`.${styles.about}`)?.offsetWidth;
-      setContainerWidth(width);
-    };
-
-    handleResize(); // Initialize width
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <div className={styles.about}>
@@ -63,10 +49,6 @@ const About = () => {
           </span>
           people.
         </h3>
-      </div>
-
-      <div className={styles.blocks_overlay}>
-        {/* <Blocks containerWidth={containerWidth} /> */}
       </div>
     </div>
   );

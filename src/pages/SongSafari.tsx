@@ -31,21 +31,8 @@ const SongSafari = () => {
       <div>
         <h1>Song Safari - My Journey</h1>
         <p>
-          With every side project I embarked on, I noticed a pattern—they
-          weren't creations I'd genuinely utilize. Whether it was an Ecommerce
-          website, a Netflix clone, or a Disney replica, they all served as
-          learning experiences.
-        </p>
-        <p>
-          I grew tired of crafting projects for the sake of it. I wanted to
-          develop something personally meaningful, something I could actively
-          engage with. Thus, Song Safari emerged—a project where I wasn't just
-          the creator but also the user.
-        </p>
-        <p>
-          Throughout its development, I found myself immersed in its features,
-          discovering unique songs. This project fills me with immense pride,
-          knowing that I've created something that I would personally use.
+          A website to help discover new music genres based on users' spotify
+          playlist
         </p>
         <LazyLoad once>
           <img src={home} alt="Home page of Song Safari" />
@@ -53,11 +40,51 @@ const SongSafari = () => {
       </div>
 
       <div>
-        <h1>The search for a genre proximity database</h1>
+        <h1>
+          <span className={styles.bullet_point}></span>
+          The Problem
+        </h1>
+        <p>
+          Music streaming services like Spotify often provide recommendations
+          based on popular tracks and artists, but discovering new and diverse
+          music genres can still be challenging for users. Many listeners find
+          themselves stuck in familiar genres and are unaware of the vast array
+          of music available.
+        </p>
+      </div>
+
+      <div>
+        <h1>
+          <span className={styles.bullet_point}></span>
+          The Solution
+        </h1>
+
+        <p>
+          Develop a website that leverages users' Spotify playlists to help them
+          discover new music genres. By analyzing the genres of songs in their
+          playlists, the website can recommend related but unfamiliar genres.
+        </p>
+      </div>
+
+      <div>
+        <h1>
+          <span className={styles.bullet_point}></span>
+          The Goal
+        </h1>
+
+        <span>
+          Help users build more varied and interesting music libraries and enjoy
+          a richer auditory experience.
+        </span>
+      </div>
+
+      <div>
+        <h1>Searching for a genre proximity database</h1>
         <span>
           For my idea to work I needed a database that shows how genres relate.
-          For example, recognizing that "rap" and "hip hop" are closely related,
-          while "country music" isn't.
+          For example, recognizing that <code>"rap"</code> and{" "}
+          <code>"hip hop"</code> are closely related, while{" "}
+          <code>"country music"</code> isn't.
         </span>
         <p>
           After searching for such a database with no luck, I almost gave up on
@@ -81,7 +108,8 @@ const SongSafari = () => {
         <p>
           I converted the HTML into a text file and then filtered it to extract
           only the top, left, and genre name. Using regex, I managed to isolate
-          these values and saved them into a new file named "output file".
+          these values and saved them into a new file named{" "}
+          <code>"output file".</code>
         </p>
         <LazyLoad once>
           <img src={html} alt="screenshot of some code" />
@@ -96,9 +124,9 @@ const SongSafari = () => {
         <p>
           Upon encountering over 6000 unique genres, I realized sorting them
           solely by their top and left coordinates would be challenging. How
-          does one effectively sort data with two sorting parameters? ("The
-          answer is Quad tree. But it didn't fit my usecase") It became evident
-          that to efficiently utilize the Manhattan Distance for calculating the
+          does one effectively sort data with two sorting parameters? (The
+          answer is Quad tree. But it didn't fit my usecase) It became evident
+          that to efficiently use the Manhattan Distance to calculate the
           nearest genre, I needed to cluster the data. This would reduce the
           number of genres I need to loop through.
         </p>
@@ -116,9 +144,9 @@ const SongSafari = () => {
       <div>
         <h1>K-means? No X-means</h1>
         <p>
-          However, a flaw emerged: K-means clustering necessitates a manual
-          input for the number of clusters. With over 6000 genres, determining
-          the optimal number of clusters became a challenge. I hunted for
+          However, I noticed a flaw. K-means clustering requires a manual input
+          for the number of clusters. With over 6000 genres, determining the
+          optimal number of clusters became a challenge. I searched for
           clustering methods that could do this automatically.
         </p>
 
@@ -155,9 +183,9 @@ const SongSafari = () => {
         <p>
           With the new data in hand, I realized that just using it as is
           wouldn't cut it performance-wise. Imagine if I needed to find the
-          nearest genre to the inital genre like "pop" from a massive array
-          every time. It'd be painfully slow. So, I split the data into two
-          objects.
+          nearest genre to the inital genre like <code>"pop"</code> from a
+          massive array every time. It'd be painfully slow. So, I split the data
+          into two objects.
         </p>
 
         <p className={styles.tab}>
@@ -165,11 +193,11 @@ const SongSafari = () => {
           maps meaning searches are speedier compared to looping through arrays.
         </p>
         <p>
-          One object would use the genre as a key. So, when someone inputs
-          "pop," I could quickly find the cluster number. The second object
-          would have the cluster number as the key, containing all the genres
-          associated to that cluster. This way, searching for details became
-          much faster.
+          One object would use the genre as a key. So, when someone inputs{" "}
+          <code>"pop"</code> I could quickly find the cluster number. The second
+          object would have the cluster number as the key, containing all the
+          genres associated to that cluster. This way, searching for details
+          became much faster.
         </p>
         <LazyLoad once>
           <img src={Optimizing} alt="Some code" />
@@ -365,14 +393,35 @@ const SongSafari = () => {
             className={styles.songsafari}
           />
         </LazyLoad>
-        <LazyLoad once>
+        {/* <LazyLoad once>
           <VideoPlayer
             width="100%"
             height="100%"
             id="qm445awpvdszvb46ihay"
             className={styles.iframe}
           />
-        </LazyLoad>
+        </LazyLoad> */}
+      </div>
+
+      <div>
+        <h1>Conclusion</h1>
+        <p>
+          With every side project I embarked on, I noticed a pattern—they
+          weren't creations I'd genuinely utilize. Whether it was an Ecommerce
+          website, a Netflix clone, or a Disney replica, they all served as
+          learning experiences.
+        </p>
+        <p>
+          I grew tired of crafting projects for the sake of it. I wanted to
+          develop something personally meaningful, something I could actively
+          engage with. Thus, Song Safari emerged—a project where I wasn't just
+          the creator but also the user.
+        </p>
+        <p>
+          Throughout its development, I found myself immersed in its features,
+          discovering unique songs. This project fills me with immense pride,
+          knowing that I've created something that I would personally use.
+        </p>
       </div>
     </div>
   );

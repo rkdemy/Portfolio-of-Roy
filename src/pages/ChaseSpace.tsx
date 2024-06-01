@@ -100,7 +100,7 @@ const ChaseSpace = () => {
         </p>
 
         <div className={styles.techstack}>
-          <div>
+          <div id={styles.escrow_techstack}>
             <h4>Tech Stack</h4>
             <p>
               <SiExpo /> Expo Go

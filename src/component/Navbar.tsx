@@ -7,7 +7,7 @@ const Navbar = () => {
   const [color, setColor] = useState(false);
 
   const changeColor = () => {
-    if (window.scrollY >= 90) {
+    if (window.scrollY >= 1) {
       setColor(true);
     } else {
       setColor(false);
@@ -45,26 +45,7 @@ const Navbar = () => {
 
             <li>
               <Modal>
-                <button className={styles.button}>
-                  <span className={styles.span_mother}>
-                    <span>C</span>
-                    <span>O</span>
-                    <span>N</span>
-                    <span>T</span>
-                    <span>A</span>
-                    <span>C</span>
-                    <span>T</span>
-                  </span>
-                  <span className={styles.span_mother2}>
-                    <span>C</span>
-                    <span>O</span>
-                    <span>N</span>
-                    <span>T</span>
-                    <span>A</span>
-                    <span>C</span>
-                    <span>T</span>
-                  </span>
-                </button>
+                <button className={styles.button}>CONTACT</button>
               </Modal>
             </li>
           </ul>

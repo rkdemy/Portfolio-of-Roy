@@ -28,11 +28,6 @@
   align-items: center;
 }
 
-.section a {
-  font-family: "OutfitMedium";
-  font-size: 24px;
-}
-
 .section h3 {
   transition: all 0.2s linear;
   font-family: "Outfit";
@@ -73,6 +68,7 @@
 }
 
 .image_container img {
+  overflow: hidden !important;
   border-radius: 20px;
 }
 
@@ -91,8 +87,8 @@
 
 .play_button {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   color: white;
   top: 50%;
   left: 50%;
@@ -161,6 +157,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 1.5rem;
+  overflow: hidden !important;
 }
 
 .projectContainer_section .tech_logo {
@@ -169,35 +166,16 @@
   object-fit: contain;
 }
 
-.link_button a {
-  color: var(--page-bg);
-  text-decoration: none;
-}
-
-.link_button button {
-  background-color: var(--hero-name);
-  border: none;
-  padding: 1rem 1rem;
-  width: fit-content;
-  border-radius: 100px;
-  transition: all 0.2s linear;
-  margin: 0 1rem 0 0;
-}
-
-.link_button button:not(:last-child) {
+.link_button a:not(:last-child) {
   margin-right: 1rem;
 }
 
-.link_button button:last-child {
+.link_button a:last-child {
   margin-right: 0;
 }
 
-.link_button button:hover {
-  background-color: var(--border-colour);
-}
-
 .link_button button:hover a {
-  color: var(--hero-name);
+  color: white;
 }
 
 .button_site {

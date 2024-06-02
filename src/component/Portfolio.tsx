@@ -68,13 +68,13 @@ const ikeaTechImage = [
 
 const Portfolio = () => {
   const [chasespaceRef, chasespaceInView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
   const [disneyRef, disneyInView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
   const [notIkeaRef, notIkeaInView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   return (

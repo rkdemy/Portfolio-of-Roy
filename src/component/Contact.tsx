@@ -14,7 +14,6 @@ const Contact = () => {
         </Modal>
       </div>
       <section>
-        {/* <h4 className={styles.email}>roykdemy@gmail.com</h4> */}
       </section>
       <section>
         <ul>
@@ -24,28 +23,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className={styles.button}>
-                <span className={styles.span_mother}>
-                  <span>L</span>
-                  <span>I</span>
-                  <span>N</span>
-                  <span>K</span>
-                  <span>E</span>
-                  <span>D</span>
-                  <span>I</span>
-                  <span>N</span>
-                </span>
-                <span className={styles.span_mother2}>
-                  <span>L</span>
-                  <span>I</span>
-                  <span>N</span>
-                  <span>K</span>
-                  <span>E</span>
-                  <span>D</span>
-                  <span>I</span>
-                  <span>N</span>
-                </span>
-              </button>
+              <button>LINKEDIN</button>
             </a>
           </li>
           <li>
@@ -54,24 +32,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button>
-                <span className={styles.span_mother}>
-                  <span>G</span>
-                  <span>I</span>
-                  <span>T</span>
-                  <span>H</span>
-                  <span>U</span>
-                  <span>B</span>
-                </span>
-                <span className={styles.span_mother2}>
-                  <span>G</span>
-                  <span>I</span>
-                  <span>T</span>
-                  <span>H</span>
-                  <span>U</span>
-                  <span>B</span>
-                </span>
-              </button>
+              <button>GITHUB</button>
             </a>
           </li>
         </ul>

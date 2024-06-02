@@ -16,8 +16,8 @@
 }
 
 .summary img {
-  width: 40px;
-  height: 40px;
+  max-width: 50px;
+  max-height: 50px;
   padding: 0.4rem;
   background-color: rgba(66, 67, 62, 0.5);
   border-radius: 10px;

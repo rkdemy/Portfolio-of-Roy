@@ -1,10 +1,97 @@
 .song {
+  padding-top: 50px;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  max-width: fit-content;
+  min-height: 100vh;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.sticky_container {
+  position: sticky;
+  top: 50px;
+  min-width: 530px;
+  width: 530px;
+  padding: 3rem;
+}
+
+#back {
+  display: flex;
+  margin-bottom: 0;
+  align-items: center;
+  gap: 0.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.arrow {
+  font-size: 12px;
+}
+
+#back:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.button_container {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.button_container a {
+  flex: 1;
+}
+
+.button_container button {
+  width: 100%;
+  padding: 0.7rem;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#second_button {
+  background: none;
+  border: 1px solid #333;
+  color: white;
+}
+
+#second_button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.sticky_container h1 {
+  font-size: 48px !important;
+  margin-bottom: 1rem;
+}
+
+.sticky_container table {
+  width: 100%;
+  margin-top: 0.5rem;
+  font-family: "OutfitMedium";
+  color: #888888;
+}
+
+.sticky_container td {
+  border-bottom: 1px solid #333;
+  padding: 0.5rem 0;
+}
+
+.sticky_container td:nth-child(even) {
+  text-align: end;
+  font-family: "Zilla";
+}
+
+.content {
+  max-width: 780px;
+  border-left: 1px solid #333;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
-  color: white;
   gap: 3rem;
-  margin: 4rem auto;
-  max-width: 700px;
 }
 
 .song h1 {
@@ -17,17 +104,15 @@
 .song p {
   font-family: "Zilla", sans-serif;
   font-size: 1.1rem;
-  margin-top: 1rem;
+  color: #888888;
+  margin-bottom: 1rem;
 }
 
-#escrow_techstack p {
-  display: flex;
-  align-items: center;
-}
-
-.song span {
+#big_text {
   font-family: "Zilla", sans-serif;
-  font-size: 20px;
+  color: #888888;
+  font-size: 22px;
+  margin-bottom: 1rem;
 }
 
 .song h4 {
@@ -39,11 +124,11 @@
 }
 
 .bullet_point {
-  height: 15px;
-  width: 15px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  background-color: #333;
+  border: 1px solid grey;
+  border-radius: 3px;
   margin-right: 0.5rem;
 }
 
@@ -54,6 +139,7 @@
 }
 
 .image_container {
+  border-radius: 8px;
   display: flex;
   background-color: #3d3d3d;
   padding: 2rem;
@@ -61,22 +147,24 @@
   justify-content: center;
 }
 
-.techstack p {
-  line-height: 24px;
-  margin: 0;
-}
-
 .song code {
   background-color: rgb(75, 75, 75);
+  color: white;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 0 4px;
+  line-height: 1;
+  white-space: pre-wrap;
 }
 
 .tab {
-  border-left: 1px solid white;
-  padding-left: 0.5rem;
+  border-left: 2px solid #333;
+  padding-left: 2rem;
 }
 
 #gif {
   max-width: 250px;
+  overflow: hidden;
   border-radius: 35px;
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.6));
 }
@@ -84,21 +172,12 @@
 .song img {
   display: block;
   width: 100%;
-  margin: 1rem 0;
+  overflow: hidden !important;
+  border-radius: 8px;
 }
 
 #escrowImage {
   margin: 0;
-}
-
-.techstack {
-  background-color: rgba(239, 175, 251, 0.3);
-  border: 1px solid rgba(239, 175, 251);
-  padding: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 1rem 0;
-  justify-content: space-evenly;
 }
 
 #slim {
@@ -106,10 +185,25 @@
 }
 
 /* Adjustments for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1150px) {
+  .sticky_container {
+    max-width: 530px;
+    min-width: auto;
+  }
+}
+
+@media screen and (max-width: 910px) {
   .song {
-    grid-template-columns: 1fr;
-    padding: 0 2rem;
+    display: flex;
+    padding-top: 0;
+    flex-direction: column;
+  }
+
+  .sticky_container {
+    position: relative;
+    padding: 2rem;
+    min-width: 100%;
+    width: 100%;
   }
 
   .song p {
@@ -119,14 +213,35 @@
   .song div {
     font-size: 0.9rem;
   }
+
+  #big_text {
+    font-size: 20px;
+  }
+
+  .content {
+    padding: 2rem;
+    border-left: none;
+  }
 }
 @media screen and (max-width: 483px) {
-  .techstack {
-    justify-content: start;
+  .song {
+    padding-top: 0;
+  }
+
+  .sticky_container {
+    padding: 2rem;
+  }
+
+  .content {
+    padding: 2rem;
   }
 
   .image_container {
     padding: 1rem;
+  }
+
+  #big_text {
+    font-size: 18px;
   }
 
   #slim {

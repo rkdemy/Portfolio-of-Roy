@@ -45,28 +45,28 @@
 }
 
 .submit {
-  cursor: pointer;
   background-color: var(--page-bg);
-  font-weight: bold;
-  font-size: 16px;
   color: var(--hero-name);
-  font-weight: 600;
-  border-radius: 2rem;
-  margin: 0;
-  padding: 0;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .submit:hover {
-  background-color: var(--border-colour);
-  color: var(--hero-name);
+  background-color: var(--hero-name);
+  color: var(--page-bg);
 }
 
 .modal_content textarea {
   height: 150px;
+}
+
+.submit_container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.submit_container span {
+  font-family: "Zilla";
+  color: var(--page-bg);
 }
 
 .close_modal {

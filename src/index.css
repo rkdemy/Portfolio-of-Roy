@@ -83,10 +83,12 @@ html[data-theme="light"] {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
 
 * {
+  overflow-x: visible !important;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -94,4 +96,37 @@ html[data-theme="light"] {
 
 body {
   background-color: var(--page-bg);
+}
+
+button {
+  cursor: pointer;
+  background-color: white;
+  font-family: "Zilla", monospace;
+  padding: 0.3rem 1rem;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: fit-content;
+  color: #2e2e2e;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  border-radius: 100px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: 0.6s ease;
+  border: none;
+}
+
+button:hover {
+  background-color: #2e2e2e;
+  color: white;
+}
+
+a {
+  text-decoration: none;
 }

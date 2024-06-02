@@ -67,47 +67,40 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({
           <div className={styles.link_button}>
             {title == "ChaseSpace" ? (
               <>
-                <button>
-                  <a href={link}>Learn more...</a>
-                </button>
+                <a href={link}>
+                  <button>Learn more...</button>
+                </a>
               </>
             ) : title === "Song" ? (
               <>
-                <button>
-                  <a href={link}>Learn more...</a>
-                </button>
-                <button>
-                  <a
-                    href="https://github.com/rkdemy/song-safari-public"
-                    target="_blank"
-                  >
-                    Github
-                  </a>
-                </button>
-                <button>
-                  <a
-                    href="https://song-safari-private.vercel.app/guest"
-                    target="_blank"
-                  >
-                    Live Site
-                  </a>
-                </button>
+                <a href={link}>
+                  <button>Learn more...</button>
+                </a>
+                <a
+                  href="https://github.com/rkdemy/song-safari-public"
+                  target="_blank"
+                >
+                  <button>Github</button>
+                </a>
+                <a
+                  href="https://song-safari-private.vercel.app/guest"
+                  target="_blank"
+                >
+                  <button>Live Site</button>
+                </a>
               </>
             ) : (
               <>
-                <button>
-                  <a href="https://github.com/rkdemy/notikea" target="_blank">
-                    Github
-                  </a>
-                </button>
-                <button>
-                  <a
-                    href="https://sea-lion-app-p4at7.ondigitalocean.app"
-                    target="_blank"
-                  >
-                    Live Site
-                  </a>
-                </button>
+                <a href="https://github.com/rkdemy/notikea" target="_blank">
+                  <button>Github</button>
+                </a>
+
+                <a
+                  href="https://sea-lion-app-p4at7.ondigitalocean.app"
+                  target="_blank"
+                >
+                  <button>Live Site</button>
+                </a>
               </>
             )}
           </div>

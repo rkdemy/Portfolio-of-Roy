@@ -442,14 +442,14 @@ const SongSafari = () => {
               className={styles.songsafari}
             />
           </LazyLoad>
-          {/* <LazyLoad once>
-          <VideoPlayer
-            width="100%"
-            height="100%"
-            id="kqtvsenf8ru6dxay1fxp"
-            className={styles.iframe}
-          />
-        </LazyLoad> */}
+          <LazyLoad once>
+            <VideoPlayer
+              width="100%"
+              height="100%"
+              id="kqtvsenf8ru6dxay1fxp"
+              className={styles.iframe}
+            />
+          </LazyLoad>
         </div>
 
         <div>

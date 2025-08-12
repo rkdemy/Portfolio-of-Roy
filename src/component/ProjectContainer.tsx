@@ -83,7 +83,7 @@ const ProjectContainer: React.FC<ProjectContainerProps> = ({
                   <button>Github</button>
                 </a>
                 <a
-                  href="https://song-safari-private.vercel.app/guest"
+                  href="https://song-safari-private.vercel.app"
                   target="_blank"
                 >
                   <button>Live Site</button>

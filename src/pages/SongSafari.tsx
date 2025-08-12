@@ -42,7 +42,7 @@ const SongSafari = () => {
 
         <div className={styles.button_container}>
           <a
-            href="https://song-safari-private.vercel.app/guest"
+            href="https://song-safari-private.vercel.app"
             target="_blank"
           >
             <button>Live Site</button>

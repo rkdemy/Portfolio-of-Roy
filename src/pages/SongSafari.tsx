@@ -21,6 +21,7 @@ import inspiration from "../assets/songssafari/inspiration.png";
 import firstdesign from "../assets/songssafari/firstdesign.png";
 import seconddesign from "../assets/songssafari/seconddesign.png";
 import thirddesign from "../assets/songssafari/thirddesign.png";
+import finalDesign from "../assets/songssafari/finalDesign.png";
 import VideoPlayer from "../component/VideoPlayer";
 import { FaArrowLeft } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
@@ -41,10 +42,7 @@ const SongSafari = () => {
         </p>
 
         <div className={styles.button_container}>
-          <a
-            href="https://song-safari-private.vercel.app"
-            target="_blank"
-          >
+          <a href="https://song-safari-private.vercel.app" target="_blank">
             <button>Live Site</button>
           </a>
 
@@ -447,6 +445,42 @@ const SongSafari = () => {
               width="100%"
               height="100%"
               id="kqtvsenf8ru6dxay1fxp"
+              className={styles.iframe}
+            />
+          </LazyLoad>
+        </div>
+
+        <div>
+          <h1>Final Design V2</h1>
+          <p>
+            After a year of not working on the UI. I decided to do an overhaul
+            on the UI. Taking a network graph design to better reflect the
+            underlying process of identifying similar genres through a clustered
+            dataset. With a Neon Retro 80's design and adding additional
+            features such as:
+            <ul>
+              <li>Lasso tool to bulk select songs</li>
+              <li>Remove tool to remove songs</li>
+              <li>A modal to view selected songs on a table</li>
+              <li>
+                A legend to quickly see what genre/playlist the songs are part
+                of
+              </li>
+            </ul>
+          </p>
+          <LazyLoad once>
+            <img
+              src={finalDesign}
+              alt="Website screenshot"
+              className={styles.songsafari}
+            />
+          </LazyLoad>
+          <br />
+          <LazyLoad once>
+            <VideoPlayer
+              width="100%"
+              height="100%"
+              id="SongSafariV2"
               className={styles.iframe}
             />
           </LazyLoad>
